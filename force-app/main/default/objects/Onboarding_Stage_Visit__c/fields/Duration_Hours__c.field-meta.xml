@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_Hours__c</fullName>
+    <description>Elapsed hours for this stage visit, counting until now if still open.</description>
+    <formula>ROUND((IF(ISBLANK(Exited_At__c), NOW(), Exited_At__c) - Entered_At__c) * 24, 2)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Duration (Hours)</label>
+    <precision>16</precision>
+    <scale>2</scale>
+    <type>Number</type>
+</CustomField>

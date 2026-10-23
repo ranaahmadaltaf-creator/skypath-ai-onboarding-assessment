@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>Maximum_Capacity_Must_Not_Be_Negative</fullName>
+  <active>true</active>
+  <description>Maximum active onboarding capacity must be zero or greater.</description>
+  <errorConditionFormula>Max_Capacity__c &lt; 0</errorConditionFormula>
+  <errorMessage>Maximum capacity must be zero or greater.</errorMessage>
+  <errorDisplayField>Max_Capacity__c</errorDisplayField>
+</ValidationRule>

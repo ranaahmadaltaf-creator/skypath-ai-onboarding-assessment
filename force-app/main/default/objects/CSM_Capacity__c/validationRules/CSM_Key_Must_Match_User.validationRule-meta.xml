@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>CSM_Key_Must_Match_User</fullName>
+  <active>true</active>
+  <description>Require a CSM User and reject missing, non-18-character or case-mismatched relationship keys using case-sensitive CONTAINS and explicit length.</description>
+  <errorConditionFormula>OR( ISBLANK(CSM_User__c), ISBLANK(CSM_User_Key__c), LEN(CSM_User_Key__c) &lt;&gt; 18, NOT(CONTAINS(CSM_User_Key__c, CASESAFEID(CSM_User__c))) )</errorConditionFormula>
+  <errorMessage>Select a CSM User and supply the matching 18-character User Key.</errorMessage>
+  <errorDisplayField>CSM_User_Key__c</errorDisplayField>
+</ValidationRule>

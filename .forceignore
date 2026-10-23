@@ -1,0 +1,12 @@
+# Salesforce CLI local state and cached metadata
+.sfdx
+.sf
+.sfdx/**
+.sf/**
+# VS Code / generated project tooling not deployable source
+**/jsconfig.json
+**/.eslintrc.json
+**/.eslintcache
+.vscode/**
+node_modules/**
+.DS_Store

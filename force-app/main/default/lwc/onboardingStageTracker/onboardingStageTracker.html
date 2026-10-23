@@ -1,0 +1,95 @@
+<template>
+    <section class="tracker" aria-label="Revinfinity onboarding progress">
+        <header class="tracker-header">
+            <div class="brand">REVINFINITY <span class="brand-divider">/</span> ONBOARDING</div>
+            <h2 class="tracker-title">Stage Tracker</h2>
+        </header>
+
+        <template lwc:if={hasError}>
+            <div class="tracker-message tracker-message--error" role="alert">
+                Unable to load onboarding details. Check record access and field permissions.
+            </div>
+        </template>
+        <template lwc:elseif={isLoaded}>
+            <div class="summary">
+                <div class="summary-heading">
+                    <span class={statusClass}>{statusText}</span>
+                    <span class="progress-percent">{progressPercent}%</span>
+                </div>
+                <p class="current-stage">{currentStage}</p>
+                <p class="record-name" title={onboardingName}>{onboardingName}</p>
+                <div class="progress-track" role="progressbar"
+                     aria-label="Onboarding stage progress" aria-valuemin="0"
+                     aria-valuemax="100" aria-valuenow={progressPercent}>
+                    <div class="progress-fill" style={progressStyle}></div>
+                </div>
+                <div class="summary-footer">
+                    <span>{progressText}</span>
+                    <template lwc:if={hasTargetGoLive}>
+                        <span>
+                            Target:
+                            <lightning-formatted-date-time
+                                value={targetGoLive}
+                                year="numeric" month="short" day="2-digit"
+                                time-zone="UTC">
+                            </lightning-formatted-date-time>
+                        </span>
+                    </template>
+                </div>
+            </div>
+
+            <template lwc:if={isKnownStage}>
+                <div class="stages" role="list" aria-label="Six onboarding stages">
+                    <template for:each={steps} for:item="step">
+                        <div key={step.key} class={step.rowClass} role="listitem"
+                             aria-current={step.ariaCurrent}>
+                            <div class={step.markerClass} aria-hidden="true">
+                                <template lwc:if={step.isPast}>
+                                    <lightning-icon icon-name="utility:check" size="xx-small"
+                                        class="complete-icon" alternative-text="Completed">
+                                    </lightning-icon>
+                                </template>
+                                <template lwc:else>{step.number}</template>
+                            </div>
+                            <div class="stage-info">
+                                <div class="stage-heading">
+                                    <strong class="stage-name">{step.shortName}</strong>
+                                    <span class="stage-state">{step.stateText}</span>
+                                </div>
+                                <template lwc:if={step.hasTimestamp}>
+                                    <p class="stage-time">
+                                        First entered:
+                                        <lightning-formatted-date-time
+                                            value={step.firstReachedAt}
+                                            year="numeric" month="short" day="2-digit"
+                                            hour="2-digit" minute="2-digit">
+                                        </lightning-formatted-date-time>
+                                    </p>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div class="guidance">
+                    <span class="guidance-label">NEXT ACTION / STATUS</span>
+                    <p>{nextAction}</p>
+                </div>
+                <p class="footnote">
+                    First-entered dates are historical. For time spent and QA rework visits,
+                    see the Stage Visits related list.
+                </p>
+            </template>
+            <template lwc:else>
+                <div class="tracker-message" role="status">
+                    The current stage is not part of the six-stage onboarding process.
+                </div>
+            </template>
+        </template>
+        <template lwc:else>
+            <div class="loading-container">
+                <lightning-spinner size="small" alternative-text="Loading onboarding stage tracker">
+                </lightning-spinner>
+            </div>
+        </template>
+    </section>
+</template>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Single global mutex row used to serialize capacity-changing transactions.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi><enableHistory>false</enableHistory><enableReports>false</enableReports>
+    <enableSearch>false</enableSearch><enableSharing>true</enableSharing><enableStreamingApi>true</enableStreamingApi><label>Onboarding Assignment Lock</label>
+    <nameField>
+        <displayFormat>LOCK-{00000}</displayFormat>
+        <label>Lock Record Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Onboarding Assignment Locks</pluralLabel>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

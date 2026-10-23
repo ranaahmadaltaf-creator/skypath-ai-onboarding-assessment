@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>Current stage; transition validity is enforced by Apex before trigger.</description>
+    <label>Onboarding Stage</label>
+    <trackHistory>true</trackHistory><type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kickoff Scheduled</fullName>
+                <default>true</default>
+                <label>Kickoff Scheduled</label>
+            </value>
+            <value>
+                <fullName>Gathering Info</fullName>
+                <label>Gathering Info</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>QA / Review</fullName>
+                <label>QA / Review</label>
+            </value>
+            <value>
+                <fullName>Go Live</fullName>
+                <label>Go Live</label>
+            </value>
+            <value>
+                <fullName>Post-Launch Review</fullName>
+                <label>Post-Launch Review</label>
+            </value>
+        </valueSetDefinition>
+        <restricted>true</restricted>
+    </valueSet>
+</CustomField>

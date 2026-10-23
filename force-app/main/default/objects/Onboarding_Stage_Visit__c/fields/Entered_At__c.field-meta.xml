@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entered_At__c</fullName>
+    <description>Time this stage visit began.</description>
+    <label>Entered At</label>
+    <required>true</required>
+    <type>DateTime</type>
+</CustomField>

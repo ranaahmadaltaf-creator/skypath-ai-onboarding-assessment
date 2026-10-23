@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>Opportunity_Key_Must_Match_Deal</fullName>
+  <active>true</active>
+  <description>Reject missing, non-18-character or case-mismatched relationship keys using case-sensitive CONTAINS and explicit length.</description>
+  <errorConditionFormula>OR( ISBLANK(Opportunity_Key__c), LEN(Opportunity_Key__c) &lt;&gt; 18, NOT(CONTAINS(Opportunity_Key__c, CASESAFEID(Opportunity__c))) )</errorConditionFormula>
+  <errorMessage>Opportunity Key must contain the 18-character ID of the related Opportunity.</errorMessage>
+  <errorDisplayField>Opportunity_Key__c</errorDisplayField>
+</ValidationRule>

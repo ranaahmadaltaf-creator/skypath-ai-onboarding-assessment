@@ -1,0 +1,33 @@
+.sf/
+.sfdx/
+.vscode/.local/
+*.log
+.DS_Store
+node_modules/
+
+# Salesforce local files
+.sf/
+.sfdx/
+.localdevserver/
+
+# Local editor and dependencies
+.vscode/
+node_modules/
+
+# Backups and temporary files
+_metadata_backups/
+*.bak
+*.log
+*.zip
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local test scripts
+scripts/apex/
+mdapi-check/

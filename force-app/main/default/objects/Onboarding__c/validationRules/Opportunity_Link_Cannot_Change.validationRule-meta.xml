@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>Opportunity_Link_Cannot_Change</fullName>
+  <active>true</active>
+  <description>The link to the original Closed Won deal is immutable after creation.</description>
+  <errorConditionFormula>AND(NOT(ISNEW()), ISCHANGED(Opportunity__c))</errorConditionFormula>
+  <errorMessage>The related Opportunity cannot be changed after onboarding creation.</errorMessage>
+  <errorDisplayField>Opportunity__c</errorDisplayField>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Go_Live__c</fullName>
+    <description>Sales-supplied target launch date; service may fall back to CloseDate plus 30 calendar days.</description>
+    <label>Target Go-Live</label>
+    <type>Date</type>
+</CustomField>

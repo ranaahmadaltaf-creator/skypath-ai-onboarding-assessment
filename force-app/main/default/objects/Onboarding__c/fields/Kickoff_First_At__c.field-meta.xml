@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kickoff_First_At__c</fullName>
+    <description>Immutable date/time of first entry into this stage. Set only by Apex service.</description>
+    <label>Kickoff First Reached At</label>
+    <type>DateTime</type>
+</CustomField>

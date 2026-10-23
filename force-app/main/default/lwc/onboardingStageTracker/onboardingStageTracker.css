@@ -1,0 +1,258 @@
+:host {
+    display: block;
+}
+
+.tracker {
+    background: #ffffff;
+    border: 1px solid #dbe5e9;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #173344;
+    box-shadow: 0 3px 14px rgba(19, 64, 74, 0.05);
+}
+
+.tracker-header {
+    background: linear-gradient(115deg, #0b5966, #0e8490);
+    color: #ffffff;
+    padding: 1rem 1.1rem;
+}
+
+.brand {
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    opacity: 0.85;
+}
+
+.brand-divider {
+    opacity: 0.6;
+    margin: 0 0.15rem;
+}
+
+.tracker-title {
+    font-size: 1.15rem;
+    font-weight: 750;
+    margin-top: 0.35rem;
+}
+
+.summary {
+    padding: 1rem 1.1rem 0.8rem;
+    border-bottom: 1px solid #e4edef;
+}
+
+.summary-heading,
+.summary-footer,
+.stage-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.status {
+    display: inline-block;
+    background: #e9f4fb;
+    color: #0b607f;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.69rem;
+    font-weight: 700;
+}
+
+.status--complete {
+    background: #e6f5ed;
+    color: #176b47;
+}
+
+.progress-percent {
+    font-size: 1.25rem;
+    color: #0b6170;
+    font-weight: 800;
+}
+
+.current-stage {
+    font-size: 1.05rem;
+    font-weight: 750;
+    margin-top: 0.55rem;
+    overflow-wrap: anywhere;
+}
+
+.record-name {
+    color: #627883;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin: 0.2rem 0 0.8rem;
+    overflow-wrap: anywhere;
+}
+
+.progress-track {
+    background: #e0ebed;
+    height: 0.52rem;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #168c9a, #29a783);
+    height: 100%;
+    transition: width 160ms ease;
+    border-radius: inherit;
+}
+
+.summary-footer {
+    flex-wrap: wrap;
+    color: #5a7480;
+    font-size: 0.68rem;
+    margin-top: 0.55rem;
+}
+
+.stages {
+    padding: 0.85rem 1.1rem 0.5rem;
+}
+
+.stage-row {
+    display: grid;
+    grid-template-columns: 1.85rem minmax(0, 1fr);
+    gap: 0.7rem;
+    position: relative;
+    min-height: 3.85rem;
+    padding: 0.3rem 0 0.85rem;
+}
+
+.stage-row:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 0.875rem;
+    top: 2.2rem;
+    bottom: -0.2rem;
+    width: 2px;
+    background: #d9e5e7;
+}
+
+.stage-marker {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 100%;
+    font-size: 0.8rem;
+    font-weight: 750;
+    border: 2px solid #d4e3e6;
+    background: #f7fafb;
+    color: #79919a;
+}
+
+.stage-marker--complete {
+    background: #218b71;
+    border-color: #218b71;
+    color: white;
+}
+
+.complete-icon {
+    --slds-c-icon-color-foreground-default: #ffffff;
+}
+
+.stage-marker--current {
+    background: #0e7785;
+    border-color: #0e7785;
+    color: white;
+    box-shadow: 0 0 0 4px #e5f4f6;
+}
+
+.stage-marker--revisited {
+    background: #f0f6fa;
+    border-color: #79a5b5;
+    color: #30677a;
+}
+
+.stage-info {
+    min-width: 0;
+    padding-top: 0.14rem;
+}
+
+.stage-name {
+    font-size: 0.79rem;
+    color: #1b3d49;
+    overflow-wrap: anywhere;
+}
+
+.stage-row--current .stage-name {
+    color: #0a7380;
+}
+
+.stage-state {
+    color: #718792;
+    font-size: 0.63rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.stage-row--current .stage-state {
+    color: #0e7785;
+    font-weight: 750;
+}
+
+.stage-time {
+    margin-top: 0.25rem;
+    font-size: 0.66rem;
+    color: #708691;
+    line-height: 1.4;
+}
+
+.guidance {
+    background: #f0f8f8;
+    margin: 0 1.1rem 0.8rem;
+    border-left: 3px solid #178796;
+    border-radius: 4px;
+    padding: 0.7rem 0.75rem;
+}
+
+.guidance-label {
+    color: #276e76;
+    font-size: 0.6rem;
+    letter-spacing: 0.07em;
+    font-weight: 800;
+}
+
+.guidance p {
+    color: #2d5660;
+    font-size: 0.73rem;
+    line-height: 1.5;
+    margin-top: 0.2rem;
+}
+
+.footnote {
+    font-size: 0.64rem;
+    color: #7a8e98;
+    line-height: 1.45;
+    margin: 0 1.1rem 1rem;
+}
+
+.tracker-message {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding: 1rem;
+    color: #4a6471;
+}
+
+.tracker-message--error {
+    color: #9d262b;
+}
+
+.loading-container {
+    min-height: 6rem;
+    position: relative;
+}
+
+@media (max-width: 380px) {
+    .stage-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+    .stage-state {
+        text-align: left;
+    }
+}

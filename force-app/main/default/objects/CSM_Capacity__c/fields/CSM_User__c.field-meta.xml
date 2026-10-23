@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSM_User__c</fullName>
+    <description>The Salesforce user eligible to own onboarding.</description>
+    <label>CSM User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>CSM Capacities</relationshipLabel>
+    <relationshipName>CSMCapacities</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>
