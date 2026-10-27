@@ -122,13 +122,7 @@ Do not commit `.sf/`, `.sfdx/`, local backups, `mdapi-check/`, or local anonymou
 - **Permission separation:** managers can perform privileged assignment actions; CSMs receive only their operational capabilities.
 
 See `docs/SkyPath_Technical_Design.pdf` (and editable `.md`) for data-model decisions, Apex versus Flow reasoning, 200-record assignment, the explicit assumptions log, business-hours stretch option and second-product scaling.
-
-## Demo
-
-The submission walkthrough should show the business workflow, Apex/test architecture, concurrency/capacity behavior, LWC stages, history, reports and dashboard, security, and fresh-org deployment evidence. Add a video link here before final submission.
-
-**Demo recording:** _Add final recording URL here_
-
+ 
 ## Submission checklist
 
 - [x] Core functionality implemented
